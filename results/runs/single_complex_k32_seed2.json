@@ -1,0 +1,143 @@
+{
+  "condition": "single_complex_k32",
+  "seed_index": 2,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 32,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.5028,
+    "conflict_rate_test": 0.5059
+  },
+  "final_eval": {
+    "test_accuracy": 0.499,
+    "ablation": {
+      "acc_clean": 0.499,
+      "acc_no_simple": 0.5044,
+      "acc_no_complex": 0.5013,
+      "drop_simple": -0.00539999999999996,
+      "drop_complex": -0.0022999999999999687,
+      "relative_reliance": 0.0030999999999999917
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.4646,
+      "frac_follows_complex": 0.5354,
+      "preference_index": -0.07079999999999997,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.46926270013836724,
+      "frac_follows_complex": 0.5307372998616328,
+      "preference_index": -0.06147459972326552,
+      "n": 5059
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5112,
+    "ablation": {
+      "acc_clean": 0.5112,
+      "acc_no_simple": 0.5089,
+      "acc_no_complex": 0.5065,
+      "drop_simple": 0.0022999999999999687,
+      "drop_complex": 0.0047000000000000375,
+      "relative_reliance": 0.0024000000000000687
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.39515,
+      "frac_follows_complex": 0.60485,
+      "preference_index": -0.2097,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.495,
+      "conflict_preference": -0.26699999999999996,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0010000000000000009,
+        "drop_complex": -0.007900000000000018
+      }
+    },
+    "2": {
+      "test_accuracy": 0.513,
+      "conflict_preference": -0.17789999999999995,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0042999999999999705,
+        "drop_complex": 0.011199999999999988
+      }
+    },
+    "3": {
+      "test_accuracy": 0.491,
+      "conflict_preference": 0.00720000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.004400000000000015,
+        "drop_complex": -0.004500000000000004
+      }
+    },
+    "5": {
+      "test_accuracy": 0.4922,
+      "conflict_preference": 0.7790999999999999,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.00819999999999993,
+        "drop_complex": -0.0006999999999999784
+      }
+    },
+    "10": {
+      "test_accuracy": 0.4981,
+      "conflict_preference": -0.15910000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0028000000000000247,
+        "drop_complex": -0.0009000000000000119
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5049,
+      "conflict_preference": -0.1894,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0012999999999999678,
+        "drop_complex": 0.01100000000000001
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5038,
+      "conflict_preference": -0.2015,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0031999999999999806,
+        "drop_complex": 0.0033000000000000806
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5046,
+      "conflict_preference": -0.5422,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0006000000000000449,
+        "drop_complex": 0.007100000000000051
+      }
+    },
+    "100": {
+      "test_accuracy": 0.499,
+      "conflict_preference": -0.07079999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.00019999999999997797,
+        "drop_complex": 0.005599999999999994
+      }
+    }
+  },
+  "train_loss_final": 0.6912525713443756,
+  "train_seconds": 9.09
+}

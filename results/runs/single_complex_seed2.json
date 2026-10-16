@@ -1,0 +1,143 @@
+{
+  "condition": "single_complex",
+  "seed_index": 2,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.506,
+    "conflict_rate_test": 0.502
+  },
+  "final_eval": {
+    "test_accuracy": 0.5142,
+    "ablation": {
+      "acc_clean": 0.5142,
+      "acc_no_simple": 0.5114,
+      "acc_no_complex": 0.5061,
+      "drop_simple": 0.0028000000000000247,
+      "drop_complex": 0.008099999999999996,
+      "relative_reliance": 0.005299999999999971
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.4875,
+      "frac_follows_complex": 0.5125,
+      "preference_index": -0.024999999999999967,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.4898406374501992,
+      "frac_follows_complex": 0.5101593625498008,
+      "preference_index": -0.020318725099601587,
+      "n": 5020
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5184,
+    "ablation": {
+      "acc_clean": 0.5184,
+      "acc_no_simple": 0.5186,
+      "acc_no_complex": 0.5071,
+      "drop_simple": -0.00019999999999997797,
+      "drop_complex": 0.011299999999999977,
+      "relative_reliance": 0.011499999999999955
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.47705,
+      "frac_follows_complex": 0.52295,
+      "preference_index": -0.04590000000000005,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.521,
+      "conflict_preference": -0.6402000000000001,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0025000000000000577,
+        "drop_complex": 0.02290000000000003
+      }
+    },
+    "2": {
+      "test_accuracy": 0.5273,
+      "conflict_preference": -0.010299999999999976,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0012999999999999678,
+        "drop_complex": 0.03210000000000002
+      }
+    },
+    "3": {
+      "test_accuracy": 0.5237,
+      "conflict_preference": 0.3454,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.006900000000000017,
+        "drop_complex": 0.02820000000000006
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5208,
+      "conflict_preference": 0.30960000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0004999999999999449,
+        "drop_complex": 0.025000000000000022
+      }
+    },
+    "10": {
+      "test_accuracy": 0.5221,
+      "conflict_preference": -0.5513999999999999,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.005199999999999982,
+        "drop_complex": 0.02360000000000001
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5095,
+      "conflict_preference": -0.49960000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0016000000000000458,
+        "drop_complex": 0.009000000000000008
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5246,
+      "conflict_preference": -0.4866,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.005800000000000027,
+        "drop_complex": 0.021599999999999953
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5228,
+      "conflict_preference": -0.405,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.006699999999999928,
+        "drop_complex": 0.020500000000000074
+      }
+    },
+    "100": {
+      "test_accuracy": 0.5142,
+      "conflict_preference": -0.024999999999999967,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0031999999999999806,
+        "drop_complex": 0.007900000000000018
+      }
+    }
+  },
+  "train_loss_final": 0.6847518652677536,
+  "train_seconds": 9.0
+}

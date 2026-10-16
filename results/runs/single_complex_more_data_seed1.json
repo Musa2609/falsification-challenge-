@@ -1,0 +1,144 @@
+{
+  "condition": "single_complex_more_data",
+  "seed_index": 1,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "swap_columns": false,
+    "n_train": 40000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.4993,
+    "conflict_rate_test": 0.5009
+  },
+  "final_eval": {
+    "test_accuracy": 0.5115,
+    "ablation": {
+      "acc_clean": 0.5115,
+      "acc_no_simple": 0.5094,
+      "acc_no_complex": 0.4959,
+      "drop_simple": 0.0020999999999999908,
+      "drop_complex": 0.015599999999999947,
+      "relative_reliance": 0.013499999999999956
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.6495,
+      "frac_follows_complex": 0.3505,
+      "preference_index": 0.299,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.6492313835096826,
+      "frac_follows_complex": 0.35076861649031743,
+      "preference_index": 0.29846276701936514,
+      "n": 5009
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5145,
+    "ablation": {
+      "acc_clean": 0.5145,
+      "acc_no_simple": 0.5163,
+      "acc_no_complex": 0.5007,
+      "drop_simple": -0.0018000000000000238,
+      "drop_complex": 0.013799999999999923,
+      "relative_reliance": 0.015599999999999947
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.50205,
+      "frac_follows_complex": 0.49795,
+      "preference_index": 0.0040999999999999925,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.5198,
+      "conflict_preference": 0.2764,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0004999999999999449,
+        "drop_complex": 0.016300000000000092
+      }
+    },
+    "2": {
+      "test_accuracy": 0.5269,
+      "conflict_preference": 0.1652,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0025999999999999357,
+        "drop_complex": 0.022700000000000053
+      }
+    },
+    "3": {
+      "test_accuracy": 0.5174,
+      "conflict_preference": 0.3687,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0021999999999999797,
+        "drop_complex": 0.015699999999999936
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5241,
+      "conflict_preference": -0.006299999999999972,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -9.999999999998899e-05,
+        "drop_complex": 0.025400000000000034
+      }
+    },
+    "10": {
+      "test_accuracy": 0.5213,
+      "conflict_preference": -0.42589999999999995,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0008000000000000229,
+        "drop_complex": 0.021199999999999997
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5387,
+      "conflict_preference": -0.42229999999999995,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.008500000000000063,
+        "drop_complex": 0.03720000000000001
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5351,
+      "conflict_preference": -0.36379999999999996,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0035999999999999366,
+        "drop_complex": 0.034499999999999975
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5257,
+      "conflict_preference": 0.2197,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0009999999999998899,
+        "drop_complex": 0.021399999999999975
+      }
+    },
+    "100": {
+      "test_accuracy": 0.5115,
+      "conflict_preference": 0.299,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0004999999999999449,
+        "drop_complex": 0.009899999999999909
+      }
+    }
+  },
+  "train_loss_final": 0.6812141013752883,
+  "train_seconds": 30.64
+}

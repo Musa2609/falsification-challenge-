@@ -1,0 +1,144 @@
+{
+  "condition": "single_complex_relu",
+  "seed_index": 4,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "swap_columns": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      16,
+      16
+    ],
+    "activation": "relu",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.4908,
+    "conflict_rate_test": 0.5032
+  },
+  "final_eval": {
+    "test_accuracy": 0.5381,
+    "ablation": {
+      "acc_clean": 0.5381,
+      "acc_no_simple": 0.5373,
+      "acc_no_complex": 0.4902,
+      "drop_simple": 0.0008000000000000229,
+      "drop_complex": 0.0479,
+      "relative_reliance": 0.047099999999999975
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.42715,
+      "frac_follows_complex": 0.57285,
+      "preference_index": -0.1457,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.4151430842607313,
+      "frac_follows_complex": 0.5848569157392687,
+      "preference_index": -0.16971383147853736,
+      "n": 5032
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.523,
+    "ablation": {
+      "acc_clean": 0.523,
+      "acc_no_simple": 0.5236,
+      "acc_no_complex": 0.502,
+      "drop_simple": -0.0005999999999999339,
+      "drop_complex": 0.02100000000000002,
+      "relative_reliance": 0.021599999999999953
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.4484,
+      "frac_follows_complex": 0.5516,
+      "preference_index": -0.10319999999999996,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.5234,
+      "conflict_preference": 0.12779999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.006699999999999928,
+        "drop_complex": 0.02300000000000002
+      }
+    },
+    "2": {
+      "test_accuracy": 0.5261,
+      "conflict_preference": 0.09870000000000001,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0033999999999999586,
+        "drop_complex": 0.02300000000000002
+      }
+    },
+    "3": {
+      "test_accuracy": 0.522,
+      "conflict_preference": 0.14399999999999996,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0039000000000000146,
+        "drop_complex": 0.017800000000000038
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5266,
+      "conflict_preference": 0.14379999999999998,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.006199999999999983,
+        "drop_complex": 0.02179999999999993
+      }
+    },
+    "10": {
+      "test_accuracy": 0.531,
+      "conflict_preference": 0.08400000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.007000000000000006,
+        "drop_complex": 0.026900000000000035
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5312,
+      "conflict_preference": 0.121,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.007900000000000018,
+        "drop_complex": 0.02970000000000006
+      }
+    },
+    "40": {
+      "test_accuracy": 0.534,
+      "conflict_preference": -0.011300000000000032,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0020999999999999908,
+        "drop_complex": 0.03540000000000004
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5338,
+      "conflict_preference": -0.05319999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0038999999999999035,
+        "drop_complex": 0.03210000000000002
+      }
+    },
+    "100": {
+      "test_accuracy": 0.5381,
+      "conflict_preference": -0.1457,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0021999999999999797,
+        "drop_complex": 0.036800000000000055
+      }
+    }
+  },
+  "train_loss_final": 0.681154303252697,
+  "train_seconds": 6.9
+}

@@ -1,0 +1,144 @@
+{
+  "condition": "single_complex_relu",
+  "seed_index": 1,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "swap_columns": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      16,
+      16
+    ],
+    "activation": "relu",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.5014,
+    "conflict_rate_test": 0.502
+  },
+  "final_eval": {
+    "test_accuracy": 0.5269,
+    "ablation": {
+      "acc_clean": 0.5269,
+      "acc_no_simple": 0.522,
+      "acc_no_complex": 0.4989,
+      "drop_simple": 0.0049000000000000155,
+      "drop_complex": 0.028000000000000025,
+      "relative_reliance": 0.02310000000000001
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.51305,
+      "frac_follows_complex": 0.48695,
+      "preference_index": 0.026100000000000012,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.502788844621514,
+      "frac_follows_complex": 0.49721115537848604,
+      "preference_index": 0.005577689243027928,
+      "n": 5020
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5159,
+    "ablation": {
+      "acc_clean": 0.5159,
+      "acc_no_simple": 0.5159,
+      "acc_no_complex": 0.4983,
+      "drop_simple": 0.0,
+      "drop_complex": 0.017600000000000005,
+      "relative_reliance": 0.017600000000000005
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.50165,
+      "frac_follows_complex": 0.49835,
+      "preference_index": 0.003300000000000025,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.5047,
+      "conflict_preference": -0.2607,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.005799999999999916,
+        "drop_complex": 0.008900000000000019
+      }
+    },
+    "2": {
+      "test_accuracy": 0.5118,
+      "conflict_preference": 0.034399999999999986,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0018000000000000238,
+        "drop_complex": 0.015100000000000058
+      }
+    },
+    "3": {
+      "test_accuracy": 0.5176,
+      "conflict_preference": 0.08200000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0008999999999999009,
+        "drop_complex": 0.024799999999999933
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5317,
+      "conflict_preference": 0.11870000000000003,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0040000000000000036,
+        "drop_complex": 0.03919999999999996
+      }
+    },
+    "10": {
+      "test_accuracy": 0.5325,
+      "conflict_preference": 0.09870000000000001,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0031999999999999806,
+        "drop_complex": 0.04039999999999999
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5261,
+      "conflict_preference": 0.017300000000000038,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0010000000000000009,
+        "drop_complex": 0.03400000000000003
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5316,
+      "conflict_preference": -0.09919999999999995,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0004999999999999449,
+        "drop_complex": 0.035199999999999954
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5148,
+      "conflict_preference": 0.02410000000000001,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0036000000000000476,
+        "drop_complex": 0.018400000000000027
+      }
+    },
+    "100": {
+      "test_accuracy": 0.5269,
+      "conflict_preference": 0.026100000000000012,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0047000000000000375,
+        "drop_complex": 0.028500000000000025
+      }
+    }
+  },
+  "train_loss_final": 0.683627225458622,
+  "train_seconds": 6.28
+}

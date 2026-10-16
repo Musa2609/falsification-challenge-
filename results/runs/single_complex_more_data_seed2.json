@@ -1,0 +1,144 @@
+{
+  "condition": "single_complex_more_data",
+  "seed_index": 2,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "swap_columns": false,
+    "n_train": 40000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.504,
+    "conflict_rate_test": 0.4948
+  },
+  "final_eval": {
+    "test_accuracy": 0.6001,
+    "ablation": {
+      "acc_clean": 0.6001,
+      "acc_no_simple": 0.6014,
+      "acc_no_complex": 0.4981,
+      "drop_simple": -0.0013000000000000789,
+      "drop_complex": 0.10199999999999998,
+      "relative_reliance": 0.10330000000000006
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.41805,
+      "frac_follows_complex": 0.58195,
+      "preference_index": -0.1639,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.40763945028294263,
+      "frac_follows_complex": 0.5923605497170574,
+      "preference_index": -0.1847210994341148,
+      "n": 4948
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5171,
+    "ablation": {
+      "acc_clean": 0.5171,
+      "acc_no_simple": 0.5164,
+      "acc_no_complex": 0.5049,
+      "drop_simple": 0.0007000000000000339,
+      "drop_complex": 0.012199999999999989,
+      "relative_reliance": 0.011499999999999955
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.49315,
+      "frac_follows_complex": 0.50685,
+      "preference_index": -0.013700000000000045,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.5191,
+      "conflict_preference": -0.39030000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0034999999999999476,
+        "drop_complex": 0.01870000000000005
+      }
+    },
+    "2": {
+      "test_accuracy": 0.524,
+      "conflict_preference": 0.09610000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0026000000000000467,
+        "drop_complex": 0.023600000000000065
+      }
+    },
+    "3": {
+      "test_accuracy": 0.5463,
+      "conflict_preference": -0.23100000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0049000000000000155,
+        "drop_complex": 0.04680000000000001
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5285,
+      "conflict_preference": 0.4792,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.005099999999999993,
+        "drop_complex": 0.021399999999999975
+      }
+    },
+    "10": {
+      "test_accuracy": 0.525,
+      "conflict_preference": 0.2776,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.00660000000000005,
+        "drop_complex": 0.022600000000000064
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5212,
+      "conflict_preference": -0.3986,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0020000000000000018,
+        "drop_complex": 0.021199999999999997
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5333,
+      "conflict_preference": -0.044999999999999984,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0029000000000000137,
+        "drop_complex": 0.031200000000000006
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5361,
+      "conflict_preference": -0.17419999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0,
+        "drop_complex": 0.032399999999999984
+      }
+    },
+    "100": {
+      "test_accuracy": 0.6001,
+      "conflict_preference": -0.1639,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0012999999999999678,
+        "drop_complex": 0.08999999999999997
+      }
+    }
+  },
+  "train_loss_final": 0.6359732906529858,
+  "train_seconds": 33.03
+}

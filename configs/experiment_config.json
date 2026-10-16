@@ -1,0 +1,52 @@
+{
+  "experiment_name": "simplicity_vs_strength_v1",
+  "description": "Two balanced binary features (simple: 1 decision boundary; complex: 2k boundaries) combined by a noisy threshold vote. Predictive strength of each feature is analytically controlled by alpha/beta; complexity by k.",
+  "data": {
+    "x_distribution": "uniform(-1,1), two iid columns",
+    "n_train": 10000,
+    "n_val": 2000,
+    "n_test": 10000,
+    "n_conflict_test": 20000,
+    "noise_sigma": 1.0,
+    "label_model": "y = +1 iff alpha*u_s + beta*u_c + N(0, sigma^2) >= 0"
+  },
+  "training_defaults": {
+    "optimizer": "adam",
+    "lr": 0.001,
+    "batch_size": 256,
+    "epochs": 100,
+    "weight_decay": 0.0,
+    "width": [64, 64],
+    "activation": "tanh",
+    "early_stopping": false,
+    "checkpoint_epochs": [1, 2, 3, 5, 10, 20, 40, 70, 100]
+  },
+  "longrun_checkpoint_epochs": [1, 2, 3, 5, 10, 20, 40, 70, 100, 150, 250, 500],
+  "seeds": [0, 1, 2, 3, 4],
+  "conditions": [
+    {"name": "baseline",              "alpha": 1.0, "beta": 1.0, "k": 8},
+    {"name": "baseline_swapped",      "alpha": 1.0, "beta": 1.0, "k": 8, "swap_columns": true},
+    {"name": "strength_simple_favored", "alpha": 1.3, "beta": 0.7, "k": 8},
+    {"name": "strength_complex_favored","alpha": 0.7, "beta": 1.3, "k": 8},
+    {"name": "strength_simple_favored_k2", "alpha": 1.3, "beta": 0.7, "k": 2},
+    {"name": "strength_complex_favored_k2","alpha": 0.7, "beta": 1.3, "k": 2},
+    {"name": "k1_null",               "alpha": 1.0, "beta": 1.0, "k": 1},
+    {"name": "k2",                    "alpha": 1.0, "beta": 1.0, "k": 2},
+    {"name": "k4",                    "alpha": 1.0, "beta": 1.0, "k": 4},
+    {"name": "k32",                   "alpha": 1.0, "beta": 1.0, "k": 32},
+    {"name": "k32_more_data",         "alpha": 1.0, "beta": 1.0, "k": 32, "n_train_mult": 4},
+    {"name": "longrun_5x",            "alpha": 1.0, "beta": 1.0, "k": 8, "epochs": 500},
+    {"name": "lr_low",                "alpha": 1.0, "beta": 1.0, "k": 8, "lr": 0.0003},
+    {"name": "lr_high",               "alpha": 1.0, "beta": 1.0, "k": 8, "lr": 0.003},
+    {"name": "single_simple",         "alpha": 1.0, "beta": 0.0, "k": 8, "label_mode": "simple"},
+    {"name": "single_complex",        "alpha": 0.0, "beta": 1.0, "k": 8, "label_mode": "complex"},
+    {"name": "single_complex_k2",     "alpha": 0.0, "beta": 1.0, "k": 2, "label_mode": "complex"},
+    {"name": "single_complex_k4",     "alpha": 0.0, "beta": 1.0, "k": 4, "label_mode": "complex"},
+    {"name": "single_complex_k32",    "alpha": 0.0, "beta": 1.0, "k": 32, "label_mode": "complex"},
+    {"name": "single_complex_longrun_5x", "alpha": 0.0, "beta": 1.0, "k": 8, "label_mode": "complex", "epochs": 500},
+    {"name": "single_complex_more_data", "alpha": 0.0, "beta": 1.0, "k": 8, "label_mode": "complex", "n_train_mult": 4},
+    {"name": "single_complex_relu",   "alpha": 0.0, "beta": 1.0, "k": 8, "label_mode": "complex", "width": [16, 16], "activation": "relu"},
+    {"name": "shuffled_labels",       "alpha": 1.0, "beta": 1.0, "k": 8, "shuffle_labels": true},
+    {"name": "arch_small_relu",       "alpha": 1.0, "beta": 1.0, "k": 8, "width": [16, 16], "activation": "relu"}
+  ]
+}

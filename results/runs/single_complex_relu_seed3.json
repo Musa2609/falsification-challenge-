@@ -1,0 +1,144 @@
+{
+  "condition": "single_complex_relu",
+  "seed_index": 3,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 8,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "swap_columns": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      16,
+      16
+    ],
+    "activation": "relu",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.5092,
+    "conflict_rate_test": 0.511
+  },
+  "final_eval": {
+    "test_accuracy": 0.5369,
+    "ablation": {
+      "acc_clean": 0.5369,
+      "acc_no_simple": 0.5438,
+      "acc_no_complex": 0.4992,
+      "drop_simple": -0.006899999999999906,
+      "drop_complex": 0.03770000000000007,
+      "relative_reliance": 0.04459999999999997
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.52055,
+      "frac_follows_complex": 0.47945,
+      "preference_index": 0.04109999999999997,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.5189823874755382,
+      "frac_follows_complex": 0.48101761252446185,
+      "preference_index": 0.03796477495107631,
+      "n": 5110
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5226,
+    "ablation": {
+      "acc_clean": 0.5226,
+      "acc_no_simple": 0.5234,
+      "acc_no_complex": 0.5031,
+      "drop_simple": -0.0008000000000000229,
+      "drop_complex": 0.019499999999999962,
+      "relative_reliance": 0.020299999999999985
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.48765,
+      "frac_follows_complex": 0.51235,
+      "preference_index": -0.0247,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.5176,
+      "conflict_preference": -0.4558,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0022000000000000908,
+        "drop_complex": 0.015899999999999914
+      }
+    },
+    "2": {
+      "test_accuracy": 0.5212,
+      "conflict_preference": -0.16090000000000004,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.00019999999999997797,
+        "drop_complex": 0.02100000000000002
+      }
+    },
+    "3": {
+      "test_accuracy": 0.519,
+      "conflict_preference": -0.11369999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0027000000000000357,
+        "drop_complex": 0.018100000000000005
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5178,
+      "conflict_preference": 0.1008,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0004999999999999449,
+        "drop_complex": 0.02140000000000003
+      }
+    },
+    "10": {
+      "test_accuracy": 0.5221,
+      "conflict_preference": 0.07390000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.005800000000000027,
+        "drop_complex": 0.02080000000000004
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5143,
+      "conflict_preference": 0.10470000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.00029999999999996696,
+        "drop_complex": 0.0131
+      }
+    },
+    "40": {
+      "test_accuracy": 0.52,
+      "conflict_preference": 0.06380000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.000500000000000056,
+        "drop_complex": 0.018900000000000028
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5362,
+      "conflict_preference": 0.0005999999999999894,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.007199999999999984,
+        "drop_complex": 0.03059999999999996
+      }
+    },
+    "100": {
+      "test_accuracy": 0.5369,
+      "conflict_preference": 0.04109999999999997,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0030000000000000027,
+        "drop_complex": 0.03550000000000009
+      }
+    }
+  },
+  "train_loss_final": 0.6839872524142265,
+  "train_seconds": 6.65
+}

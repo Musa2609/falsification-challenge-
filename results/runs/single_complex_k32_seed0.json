@@ -1,0 +1,143 @@
+{
+  "condition": "single_complex_k32",
+  "seed_index": 0,
+  "settings": {
+    "alpha": 0.0,
+    "beta": 1.0,
+    "k": 32,
+    "label_mode": "complex",
+    "shuffle_labels": false,
+    "n_train": 10000,
+    "epochs": 100,
+    "lr": 0.001,
+    "width": [
+      64,
+      64
+    ],
+    "activation": "tanh",
+    "batch_size": 256
+  },
+  "oracle": {
+    "bayes_single_simple": 0.5,
+    "bayes_single_complex": 0.8413447460685429,
+    "bayes_joint": 0.8413447460685429,
+    "label_positive_rate_test": 0.5032,
+    "conflict_rate_test": 0.503
+  },
+  "final_eval": {
+    "test_accuracy": 0.4999,
+    "ablation": {
+      "acc_clean": 0.4999,
+      "acc_no_simple": 0.4989,
+      "acc_no_complex": 0.5001,
+      "drop_simple": 0.0010000000000000009,
+      "drop_complex": -0.00019999999999997797,
+      "relative_reliance": -0.0011999999999999789
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.69435,
+      "frac_follows_complex": 0.30565,
+      "preference_index": 0.38870000000000005,
+      "n": 20000
+    },
+    "conflict_preference_on_test_split": {
+      "frac_follows_simple": 0.6976143141153082,
+      "frac_follows_complex": 0.30238568588469183,
+      "preference_index": 0.39522862823061633,
+      "n": 5030
+    }
+  },
+  "logistic_baseline": {
+    "test_accuracy": 0.5144,
+    "ablation": {
+      "acc_clean": 0.5144,
+      "acc_no_simple": 0.5126,
+      "acc_no_complex": 0.5018,
+      "drop_simple": 0.0018000000000000238,
+      "drop_complex": 0.012599999999999945,
+      "relative_reliance": 0.01079999999999992
+    },
+    "conflict_preference": {
+      "frac_follows_simple": 0.50185,
+      "frac_follows_complex": 0.49815,
+      "preference_index": 0.0037000000000000366,
+      "n": 20000
+    }
+  },
+  "checkpoints": {
+    "1": {
+      "test_accuracy": 0.4997,
+      "conflict_preference": 0.6100000000000001,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.010699999999999987,
+        "drop_complex": -0.007599999999999996
+      }
+    },
+    "2": {
+      "test_accuracy": 0.512,
+      "conflict_preference": 0.4248,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.011900000000000022,
+        "drop_complex": 0.021299999999999986
+      }
+    },
+    "3": {
+      "test_accuracy": 0.503,
+      "conflict_preference": 0.7810999999999999,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.006500000000000006,
+        "drop_complex": 0.004500000000000004
+      }
+    },
+    "5": {
+      "test_accuracy": 0.5119,
+      "conflict_preference": 0.16979999999999995,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.006800000000000028,
+        "drop_complex": 0.020000000000000018
+      }
+    },
+    "10": {
+      "test_accuracy": 0.5081,
+      "conflict_preference": 0.17720000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.012500000000000011,
+        "drop_complex": 0.014899999999999969
+      }
+    },
+    "20": {
+      "test_accuracy": 0.5085,
+      "conflict_preference": -0.40559999999999996,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": -0.0007000000000000339,
+        "drop_complex": 0.01799999999999996
+      }
+    },
+    "40": {
+      "test_accuracy": 0.5045,
+      "conflict_preference": 0.09410000000000002,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.008899999999999963,
+        "drop_complex": 0.00819999999999993
+      }
+    },
+    "70": {
+      "test_accuracy": 0.5062,
+      "conflict_preference": -0.24209999999999998,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.010199999999999987,
+        "drop_complex": 0.010399999999999965
+      }
+    },
+    "100": {
+      "test_accuracy": 0.4999,
+      "conflict_preference": 0.38870000000000005,
+      "ablation_drop_simple_vs_complex": {
+        "drop_simple": 0.0008000000000000229,
+        "drop_complex": -0.0034999999999999476
+      }
+    }
+  },
+  "train_loss_final": 0.6927827268838882,
+  "train_seconds": 8.68
+}
